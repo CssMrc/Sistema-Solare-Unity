@@ -45,8 +45,19 @@ public class GameManager : MonoBehaviour {
 			}
 
 			//Diminuzione della distanza di 10 in 10 cliccando i tasti "Shift +" e "Shift -"
-			upDistance = (Input.GetKey (KeyCode.Plus) && (Input.GetKey(KeyCode.RightShift) || Input.GetKey(KeyCode.LeftShift))) ? 10f : 0f;
-			downDistance = (Input.GetKey (KeyCode.Minus) && (Input.GetKey(KeyCode.RightShift) || Input.GetKey(KeyCode.LeftShift))) ? -10f : 0f;
+			if(Input.GetKey(KeyCode.RightShift) || Input.GetKey(KeyCode.LeftShift)){
+				if(Input.GetKey (KeyCode.Plus)){
+					upDistance = 10f;
+					downDistance = 0f;
+				} else if(Input.GetKey (KeyCode.Minus)){
+					downDistance = -10f;
+					upDistance = 0f;
+				}else {
+					upDistance = 0f;
+					downDistance = 0f;
+				}
+
+			}
 
 			//Controllo per verificare che il valore sia 1 e qundi aggiungere 10-1 per non moltiplicare per 11 ma per 10
 			if (changeDistanceSlider.value == 1 && upDistance != 0f) {
