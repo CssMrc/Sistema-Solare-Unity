@@ -102,7 +102,7 @@ Rivoluzione (UA - Eccentricità orbitale - anni):
 - Urano -> 19.189 - 0.04726 - 84.017
 - Nettuno -> 30 - 0.00859 - 164.79
 
-Valori del tachometro:
+Valori del tachimetro:
 - Velocità 0 -> Rotazione asse Z lancetta 95
 - Velocità max -> Rotazione asse Z lancetta -265
 
